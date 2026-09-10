@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&amp;display=swap">
+<style>
+  body { margin: 0; background: #fff; font-family: 'Open Sans', ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  html, body, #dc-root { scroll-behavior: smooth; scroll-padding-top: 80px; }
+  * { box-sizing: border-box; }
+  @keyframes two7bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(8px); } }
+</style>
+<script src="./image-slot.js"></script>
+</helmet>
+<div style="min-height:100vh;background:#fff">
+  <nav style="position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(255,255,255,0.9);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,0.1)">
+    <div style="max-width:1280px;margin:0 auto;padding:0 32px">
+      <div style="display:flex;align-items:center;justify-content:space-between;height:64px">
+        <a href="#home" style="display:flex;align-items:center;gap:12px">
+          <img src="assets/two7-logo-transparent.png" alt="Two7 Investments" style="height:40px;width:auto">
+          <span style="color: #111111; font-weight: 600; font-size: 18px; letter-spacing: -0.025em; font-family:'Open Sans', ui-sans-serif, system-ui, sans-serif">Two7 Investments</span>
+        </a>
+        <div style="display:flex;align-items:center;gap:32px">
+          <a href="#home" style="color:rgba(0,0,0,0.8);font-size:14px;font-weight:500;transition:color .15s" style-hover="color:#111111">Home</a>
+          <a href="Resources.dc.html" style="color:rgba(0,0,0,0.8);font-size:14px;font-weight:500;transition:color .15s" style-hover="color:#111111">Resources</a>
+          <a href="https://forms.gle/7zrdsaJ9ER5Fbmhv8" target="_blank" rel="noopener noreferrer">
+            <button style="display:inline-flex;align-items:center;justify-content:center;gap:8px;white-space:nowrap;border:0;border-radius:6px;height:36px;padding:8px 20px;background:#E53935;color:#fff;font-size:14px;font-weight:500;font-family:inherit;cursor:pointer;box-shadow:0 1px 2px 0 rgba(0,0,0,0.08);transition:background-color .15s" style-hover="background:#C62828">Join Our Mailing List</button>
+          </a>
+          <a href="https://www.instagram.com/two7_investments/" target="_blank" rel="noopener noreferrer" style="color:rgba(0,0,0,0.8);display:flex;transition:color .15s" style-hover="color:#111111">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section id="home" data-screen-label="Hero" style="position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:calc(64px + 40px) 0 120px">
+    <div style="position:absolute;inset:0;background-image:url('assets/hero-goizueta.png');background-size:cover;background-position:center;background-repeat:no-repeat"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(to bottom, rgba(255,255,255,0.45), rgba(255,255,255,0.38), rgba(255,255,255,0.6))"></div>
+    <div style="position:absolute;top:25%;right:25%;width:384px;height:384px;background:rgba(229,57,53,0.2);border-radius:9999px;filter:blur(64px)"></div>
+    <span style="position:absolute;top:96px;left:48px;font-size:64px;line-height:1;color:rgba(0,0,0,0.12)">♠</span>
+    <span style="position:absolute;top:96px;right:48px;font-size:64px;line-height:1;color:rgba(229,57,53,0.18)">♥</span>
+    <span style="position:absolute;bottom:56px;left:48px;font-size:64px;line-height:1;color:rgba(229,57,53,0.18)">♦</span>
+    <span style="position:absolute;bottom:56px;right:48px;font-size:64px;line-height:1;color:rgba(0,0,0,0.12)">♣</span>
+    <div style="position:relative;z-index:10;text-align:center;padding:0 24px;max-width:1024px;margin:0 auto">
+      <img src="assets/two7-wordmark.png" alt="Two7 Investments" style="height:clamp(140px,20vw,280px);width:auto;margin:0 auto 40px;display:block">
+      <h1 style="font-size:clamp(48px,8vw,92px);line-height:1.06;font-weight:700;color:#111111;margin:0 0 24px;letter-spacing:-0.025em;text-shadow:0 0 14px rgba(255,255,255,0.35)"><span style="color: #E53935; font-family: wintermute">Teach.</span> <span style="color: #111111; font-family: wintermute">Compete.</span> <span style="color: #E53935; font-family: wintermute">Win.</span></h1>
+      <p style="font-size: clamp(20px,2.2vw,24px); color: rgba(0,0,0,0.7); margin: 0 auto 40px; max-width: 672px; font-weight: 600; line-height: 1.4; font-family: 'Open Sans', ui-sans-serif, system-ui, sans-serif">Emory's Premier Stock Pitch Competition Club</p>
+      <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center">
+        <a href="https://forms.gle/7zrdsaJ9ER5Fbmhv8" target="_blank" rel="noopener noreferrer">
+          
+        <button style="display:inline-flex;align-items:center;justify-content:center;gap:8px;white-space:nowrap;border:0;border-radius:6px;padding:24px 32px;background:#E53935;color:#fff;font-size:18px;font-weight:500;font-family:inherit;cursor:pointer;box-shadow:0 1px 2px 0 rgba(0,0,0,0.08);transition:background-color .15s" style-hover="background:#C62828">Mailing List <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;margin-left:8px"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button></a>
+        <a href="#about" style="display:inline-flex;align-items:center;justify-content:center;gap:8px;white-space:nowrap;border:1px solid rgba(0,0,0,0.3);border-radius:6px;padding:24px 32px;color:#111111;font-size:18px;font-weight:500;background:rgba(255,255,255,0.55);backdrop-filter:blur(4px);transition:background-color .15s" style-hover="background:rgba(255,255,255,0.8)">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="competitions" data-screen-label="Competitions" style="background:#fff;padding:clamp(16px,2vw,24px) 0 clamp(20px,2.5vw,28px)">
+    <div style="max-width:1280px;margin:0 auto;padding:0 32px">
+      <p style="margin:0 0 16px;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:#B0271A">COMPETITIONS WE'VE PLACED IN</p>
+      <div ref="{{ trackRef }}" onMouseEnter="{{ pause }}" onMouseLeave="{{ resume }}" style="display:flex;gap:24px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px">
+        <div style="flex:0 0 260px;scroll-snap-align:start">
+          <div style="height:96px;background:#fff;filter:grayscale(1);display:flex">
+            <image-slot id="comp-citadel" shape="rect" fit="contain" style="background:#fff" placeholder="Citadel Securities logo"></image-slot>
+          </div>
+        </div>
+        <div style="flex:0 0 260px;scroll-snap-align:start">
+          <div style="height:96px;background:#fff;filter:grayscale(1);display:flex">
+            <image-slot id="comp-irvine" shape="rect" fit="contain" style="background:#fff" placeholder="Irvine ITG competition logo"></image-slot>
+          </div>
+        </div>
+        <div style="flex:0 0 260px;scroll-snap-align:start">
+          <div style="height:96px;background:#fff;filter:grayscale(1);display:flex">
+            <image-slot id="comp-oxford" shape="rect" fit="contain" style="background:#fff" placeholder="Oxford Alpha / University of Oxford logo"></image-slot>
+          </div>
+        </div>
+        <div style="flex:0 0 260px;scroll-snap-align:start">
+          <div style="height:96px;background:#fff;filter:grayscale(1);display:flex">
+            <image-slot id="comp-perplexity" shape="rect" fit="contain" style="background:#fff" placeholder="Perplexity logo"></image-slot>
+          </div>
+        </div>
+        <div style="flex:0 0 260px;scroll-snap-align:start">
+          <div style="height:96px;background:#fff;filter:grayscale(1);display:flex">
+            <image-slot id="comp-cornell" shape="rect" fit="contain" style="background:#fff" placeholder="Cornell University logo"></image-slot>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div style="max-width:1280px;margin:28px auto 0;padding:0 32px;display:flex;align-items:center;gap:20px">
+        <div style="flex:1;height:1px;background:rgba(0,0,0,0.12)"></div>
+        <div style="display:flex;align-items:center;gap:14px;font-size:18px;line-height:1">
+          <span style="color:rgba(0,0,0,0.35)">♠</span>
+          <span style="color:rgba(229,57,53,0.6)">♥</span>
+          <span style="color:rgba(229,57,53,0.6)">♦</span>
+          <span style="color:rgba(0,0,0,0.35)">♣</span>
+        </div>
+        <div style="flex:1;height:1px;background:rgba(0,0,0,0.12)"></div>
+      </div>
+  </section>
+
+  <section id="about" data-screen-label="What We Do" style="background:#fff;padding:clamp(56px,5.5vw,72px) 0 clamp(96px,10vw,128px)">
+    <div style="max-width:1280px;margin:0 auto;padding:0 32px">
+      <div style="margin-bottom:48px;text-align:center">
+        <h2 style="font-size: clamp(36px,4.5vw,48px); line-height: 1.1; font-weight: 700; color: #111111; margin: 0 0 24px; font-family:'Open Sans', ui-sans-serif, system-ui, sans-serif">What We <span style="color:#E53935">Do</span></h2>
+        <p style="font-size: 20px; color: rgba(0,0,0,0.65); max-width: 760px; margin: 0 auto; line-height: 1.6; font-family:'Open Sans', ui-sans-serif, system-ui, sans-serif">Two7 Investments is Emory's first stock pitch oriented club. Chartered under Emory College, we strive to give students of every major and background the resources they need to succeed in stock pitching. Under our strict open-access policy, we provide education, community, and technical resources to any Emory student seeking it.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:64px">
+        <div style="display:flex;flex-direction:column;align-items:flex-start;gap:14px;padding:32px 0;border-bottom:1px solid rgba(0,0,0,0.14)">
+          <div style="display:flex;align-items:baseline;gap:14px">
+            <span style="font-size:26px;line-height:1;color:#111111">♠</span>
+          </div>
+          <h3 style="font-size:22px;font-weight:700;color:#111111;margin:0;line-height:1.25;letter-spacing:-0.01em">Stock Pitch Excellence</h3>
+          <p style="font-size:17px;color:rgba(0,0,0,0.7);line-height:1.7;margin:0;max-width:62ch">Our technical focus is entirely on stock pitching. No fluff, no bureaucracy — just rigorous fundamental analysis and the skills to present conviction-level investment ideas.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:flex-start;gap:14px;padding:32px 0;border-bottom:1px solid rgba(0,0,0,0.14)">
+          <div style="display:flex;align-items:baseline;gap:14px">
+            <span style="font-size:26px;line-height:1;color:#E53935">♥</span>
+          </div>
+          <h3 style="font-size:22px;font-weight:700;color:#111111;margin:0;line-height:1.25;letter-spacing:-0.01em">Open to All</h3>
+          <p style="font-size:17px;color:rgba(0,0,0,0.7);line-height:1.7;margin:0;max-width:62ch">Every Emory student is welcome. Come to our semester education sessions, reach out to a current club member, or come to an event to learn more about finance or to find a competition team.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:flex-start;gap:14px;padding:32px 0;border-bottom:1px solid rgba(0,0,0,0.14)">
+          <div style="display:flex;align-items:baseline;gap:14px">
+            <span style="font-size:26px;line-height:1;color:#E53935">♦</span>
+          </div>
+          <h3 style="font-size:22px;font-weight:700;color:#111111;margin:0;line-height:1.25;letter-spacing:-0.01em">Compete Nationally</h3>
+          <p style="font-size:17px;color:rgba(0,0,0,0.7);line-height:1.7;margin:0;max-width:62ch">We send teams to premier stock pitch competitions across the country. In our first semester, our members have gone head-to-head with top programs and consistently delivered.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:flex-start;gap:14px;padding:32px 0;border-bottom:1px solid rgba(0,0,0,0.14)">
+          <div style="display:flex;align-items:baseline;gap:14px">
+            <span style="font-size:26px;line-height:1;color:#111111">♣</span>
+          </div>
+          <h3 style="font-size:22px;font-weight:700;color:#111111;margin:0;line-height:1.25;letter-spacing:-0.01em">A Professional and Social Network</h3>
+          <p style="font-size:17px;color:rgba(0,0,0,0.7);line-height:1.7;margin:0;max-width:62ch">At Two7, we believe there is enough give-and-take in industry, that we don't need to create more of it in college. All of our members are intelligent, welcoming, and not out to get you.&nbsp;</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer data-screen-label="Footer" style="background:#fff;border-top:1px solid rgba(0,0,0,0.1);padding:48px 0">
+    <div style="max-width:1280px;margin:0 auto;padding:0 32px">
+      <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px">
+        <div style="display:flex;align-items:center;gap:12px">
+          <img src="assets/two7-logo-transparent.png" alt="Two7 Investments" style="height:40px;width:auto">
+          <span style="color: #111111; font-weight: 600; font-family:'Open Sans', ui-sans-serif, system-ui, sans-serif">Two7 Investments</span>
+        </div>
+        <div style="display:flex;flex-direction:row;align-items:center;gap:28px;margin-right:auto;margin-left:16px">
+          <a href="https://www.instagram.com/two7_investments/" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; gap: 10px; color: rgba(0,0,0,0.6); font-size: 14px; transition: color .15s; font-family:'Open Sans', ui-sans-serif, system-ui, sans-serif" style-hover="color:#111111">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;flex-shrink:0">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+            </svg>
+            @two7_investments
+          </a>
+          <a href="mailto:mgmt.two7@gmail.com" style="display: flex; align-items: center; gap: 10px; color: rgba(0,0,0,0.6); font-size: 14px; transition: color .15s; font-family:'Open Sans', ui-sans-serif, system-ui, sans-serif" style-hover="color:#111111">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;flex-shrink:0">
+              <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+            </svg>
+            mgmt.two7@gmail.com
+          </a>
+        </div>
+        <div style="display:flex;align-items:center;gap:16px">
+          
+        </div>
+      </div>
+      <div style="margin-top: 40px; padding-top: 32px; border-top: 1px solid rgba(0,0,0,0.1); text-align: center; font-family:'Open Sans', ui-sans-serif, system-ui, sans-serif">
+        <div style="display:flex;justify-content:center;gap:12px;font-size:14px;line-height:1;margin-bottom:14px"><span style="color:rgba(0,0,0,0.3)">♠</span><span style="color:rgba(229,57,53,0.5)">♥</span><span style="color:rgba(229,57,53,0.5)">♦</span><span style="color:rgba(0,0,0,0.3)">♣</span></div>
+        <p style="color:rgba(0,0,0,0.6);font-size:14px;margin:0">© 2026 Two7 Investments at Emory University. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  trackRef = React.createRef();
+  paused = false;
+  cloneTrack() {
+    const el = this.trackRef.current;
+    if (!el || el.querySelector('[data-loop-clone]')) return;
+    const originals = Array.from(el.children);
+    if (!originals.length) return;
+    // duplicate the set twice so the strip is always wider than the viewport
+    for (let pass = 0; pass < 2; pass++) {
+      originals.forEach((node) => {
+        const c = node.cloneNode(true);
+        c.setAttribute('data-loop-clone', '');
+        c.setAttribute('aria-hidden', 'true');
+        el.appendChild(c);
+      });
+    }
+    this.setWidth = originals.reduce((w, n) => w + n.getBoundingClientRect().width + 24, 0);
+  }
+  componentDidMount() {
+    this.cloneTrack();
+    const step = () => {
+      const el = this.trackRef.current;
+      if (el && !this.paused) {
+        el.style.scrollBehavior = 'auto';
+        const set = this.setWidth || 0;
+        let next = el.scrollLeft + 0.6;
+        if (set > 0 && next >= set) next -= set;
+        el.scrollLeft = next;
+      }
+      this.raf = requestAnimationFrame(step);
+    };
+    this.raf = requestAnimationFrame(step);
+  }
+  componentWillUnmount() { cancelAnimationFrame(this.raf); }
+  renderVals() {
+    return {
+      trackRef: this.trackRef,
+      pause: () => { this.paused = true; },
+      resume: () => { this.paused = false; },
+    };
+  }
+}
+</script>
+</body>
+</html>
